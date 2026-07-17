@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 function Hero() {
     return (
-        <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
+        <section id="hero" className="relative flex m-h-screen items-start overflow-hidden pt-36 md:items-center md:pt-0">
 
             <img
                 src={heroImage}
@@ -24,6 +24,20 @@ function Hero() {
                     transition={{ duration: 0.8 }}
                     className="max-w-3xl"
                 >
+                    <div className="mt-8 flex justify-center md:hidden">
+                        <a
+                            href="#services"
+                            className="flex flex-col items-center text-white animate-bounce"
+                        >
+                            <span className="text-xs uppercase tracking-[0.3em]">
+                                Scroll
+                            </span>
+
+                            <span className="mt-2 text-2xl">
+                                ⌄
+                            </span>
+                        </a>
+                    </div>
 
                     <p className="mb-6 text-sm font-semibold uppercase tracking-[0.4em] text-orange-500">
                         Northeast Tennessee
@@ -49,7 +63,7 @@ function Hero() {
 
                     </div>
 
-                    <div className="mt-16 flex flex-wrap gap-8 text-sm font-medium uppercase tracking-wider text-gray-300">
+                    <div className="mt-16 flex flex-col items-center gap-4 text-center text-sm font-medium uppercase tracking-wider text-gray-300 sm:flex-row sm:flex-wrap sm:justify-start sm:gap-8 sm:text-left">
 
                         <span>✓ Licensed & Insured</span>
 
@@ -63,18 +77,23 @@ function Hero() {
 
             </div>
 
-            <div className="absolute bottom-10 left-1/2 animate-bounce text-white">
-
-                <a href="#services" className="flex flex-col items-center gap-2">
-
-                    <span className="text-xs uppercase tracking-[0.3em]">
+            <div className="abolute bottom-10 left-1/2 hidden -traslate-x-1/2 animate-bounce text-white md:block">
+            
+                <a
+                    href="#services"
+                    className="flex flex-col items-center gap-2"
+                >
+                    <span className="text-xs        uppercase tracking-[0.3em]">
                         Scroll
                     </span>
-
-                    <span className="text-2xl">⌄</span>
+                
+                    <span className="text-2xl">
+                        ⌄
+                    </span>
+                
                 </a>
-
             </div>
+
         </section>
     );
 }
