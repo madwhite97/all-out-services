@@ -33,13 +33,13 @@ function Navbar() {
                 : "bg-transparent"
             }`}
         >
-            <div className="mx-auto flex  h-20 max-w-7xl items-center justify-between px-6">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 md:px-6 md:py-6">
 
                 <HashLink smooth to="/#hero" className="flex items-center">
                     <img
                         src={logo}
                         alt="All Out Services"
-                        className="h-20 w-auto"
+                        className="h-14 w-auto transition-all duration-300 md:h-24"
                     />
                 </HashLink>
 
@@ -66,9 +66,11 @@ function Navbar() {
 
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="text-3xl text-white lg:hidden"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg text-white transition hover:bg-white/10 lg:hidden"
                 >
-                    ☰
+                    <span className="text-2xl">
+                        {mobileOpen ? "X" : "☰"}
+                    </span>
                 </button>
 
             </div>
@@ -76,21 +78,21 @@ function Navbar() {
             {mobileOpen && (
                 <div className="border-t border-white/10 bg-[#0B0B0B] lg:hidden">
                     
-                    <div className="flex flex-col p-6">
+                    <div className="flex flex-col gap-2 px-6 py-8">
 
                         {links.map((link) => (
                             <HashLink
                                 smooth
                                 key={link.name}
                                 to={`/${link.href}`}
-                                className="py-4 text-lg text-white"
+                                className="rounded-xl px-4 py-4 text-lg font-medium text-white transition hover:bg-white/10"
                                 onClick={() => setMobileOpen(false)}
                             >
                                 {link.name}
                             </HashLink>
                         ))}
 
-                        <div className="mt-4">
+                        <div className="mt-6">
                             <HashLink smooth to="/#contact">
                                 <Button>
                                     Free Estimate
