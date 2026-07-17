@@ -9,9 +9,9 @@ function Hero() {
             className="relative flex min-h-screen items-start overflow-hidden pt-32 md:items-center md:pt-0">
 
                 <img
-                    src={heroImages}
+                    src={heroImage}
                     alt="All Out Services Project"
-                    className="absolute inset-0 h-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover"
                 />
 
                 <div className="absolute inset-0 bg-black/70" />
