@@ -23,31 +23,31 @@ const services = [
     {
         title: "Excavation",
         description:
-            "Professional excavation, grading, trenching, and site development for residential and commercial projects.",
+            "Excavation, grading, trenching, and site development for residential and commercial properties.",
         icon: Tractor,
     },
     {
         title: "Retaining Walls",
         description:
-            "Custom retaining walls engineered for durability, drainage, and curb appeal.",
+            "Custom retaining walls engineered for strength, drainage, and lasting curb appeal.",
         icon: Building2,
     },
     {
         title: "Land Clearing",
         description:
-            "Brush removal, tree clearing, and complete property preparation.",
+            "Brush removal, tree clearing, and complete property preparation for new projects.",
         icon: Trees,
     },
     {
         title: "Forestry Mulching",
         description:
-            "Environmentally friendly vegetation management with specialized equipment.",
+            "Environmentally friendly vegetation management with specialized forestry mulching equipment.",
         icon: Mountain,
     },
     {
         title: "Site Preparation",
         description:
-            "Preparing your property for new construction.",
+            "Preparing your property for new construction with grading, leveling, and precision.",
         icon: Shovel,
     },
 ];
@@ -62,7 +62,7 @@ function Services() {
                     eyebrow="Professional Services"
                     title="What We Do"
                     titleClassName="text-5xl md:text-6xl"
-                    description="From excavation and grading to decroative concrete and retaining walls, All Out Services delivers quality workmanship throughout Northeast Tennessee."
+                    description="From excavation and grading to decorative concrete and retaining walls, All Out Services delivers quality workmanship throughout Northeast Tennessee."
                 />
 
                 <div className="mt-16 mb-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -73,6 +73,7 @@ function Services() {
 
                         return (
                             <motion.div
+                                className="h-full"
                                 key={service.title}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -82,31 +83,29 @@ function Services() {
                                     delay: index * 0.08,
                                 }}
                             >
-
                                 <Link to="/gallery">
-                                    
-                                    <Card className="group h-full cursor-pointer p-8 transition-all duration-200 hover:-translate-y-2">
-                                        
+                                    <Card className="group flex h-full min-h-[340px] flex-col cursor-pointer p-8 ...">
+
                                         <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500/15">
-                                        
-                                            <Icon
-                                                size={34}
-                                                className="text-orange-500"
-                                            />
+                                            <Icon size={34} className="text-orange-500" />
                                         </div>
-                                        
-                                        <h3 className="mt-8 text-2xl font-bold">
-                                            {service.title}
-                                        </h3>
-                                        
-                                        <p className="mt-4 leading-8 text-gray-400">
-                                            {service.description}
-                                        </p>
-                                        
-                                        <div className="mt-8 h-1 w-12 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-24"></div>
+
+                                        <div className="mt-8 flex flex-1 flex-col">
+                                            
+                                            <h3 className="text-2xl font-bold">
+                                                {service.title}
+                                            </h3>
+
+                                            <p className="mt-4 flex-1 leading-8 text-gray-400">
+                                                {service.description}
+                                            </p>
+
+                                            <div className="mt-8 h-1 w-12 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-24"></div>
+
+                                        </div>
 
                                     </Card>
-                                    
+
                                 </Link>
 
                             </motion.div>
