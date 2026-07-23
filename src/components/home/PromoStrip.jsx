@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Shovel } from "lucide-react";
 
 export default function PromoStrip() {
     return (
-        <section className="-mt-16 relative z-20 mb-20">
+        <section className="-mt-16 relative z-20 mb-8">
 
             <div className="mx-auto w-[92%] max-w-7xl">
 

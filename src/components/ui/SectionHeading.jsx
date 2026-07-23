@@ -5,7 +5,7 @@ function SectionHeading({
     titleClassName = "",
 }) {
     return (
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
 
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
                 {eyebrow}

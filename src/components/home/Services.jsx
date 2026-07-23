@@ -56,7 +56,7 @@ function Services() {
     return (
         <section id="services" className="bg-[#111827] pb-10">
 
-            <Container className="pt-8">
+            <Container className="pt-6">
 
                 <SectionHeading
                     eyebrow="Professional Services"
@@ -65,7 +65,7 @@ function Services() {
                     description="From excavation and grading to decorative concrete and retaining walls, All Out Services delivers quality workmanship throughout Northeast Tennessee."
                 />
 
-                <div className="mt-16 mb-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-10 mb-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
                     {services.map((service, index) => {
 
@@ -84,7 +84,8 @@ function Services() {
                                 }}
                             >
                                 <Link to="/gallery">
-                                    <Card className="group flex h-full min-h-[340px] flex-col cursor-pointer p-8 ...">
+                                    <Card className="group flex h-full 
+                                     flex-col cursor-pointer p-8 ...">
 
                                         <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500/15">
                                             <Icon size={34} className="text-orange-500" />

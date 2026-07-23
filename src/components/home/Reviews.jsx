@@ -30,13 +30,13 @@ export default function Reviews() {
                         Trusted by Homeowners Across Northeast Tennessee
                     </h2>
 
-                    <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-400">
+                    <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
                         We appreciate every customer who trusts All Out Services with their property. If we've worked with you, we'd love to hear about your experience.
                     </p>
 
                 </div>
 
-                <div className="m5-14 grid gap-8 md:grid-cols-3">
+                <div className="mt-14 grid gap-8 md:grid-cols-3">
 
                     {reviews.map((review) => (
 

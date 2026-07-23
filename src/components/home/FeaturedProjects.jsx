@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function FeaturedProjects() {
     return (
-        <section id="projects" className="bg-[#0B0B0B] py-28">
+        <section id="projects" className="bg-[#0B0B0B] py-20">
 
             <Container>
 
@@ -18,7 +18,7 @@ function FeaturedProjects() {
                     description="Every project is completed with attention to detail, quality craftsmanship, and pride in the finished result."
                 />
 
-                <div className="space-y-24">
+                <div className="space-y-16">
 
                     {projects.map((project, index) => (
                         <motion.div
