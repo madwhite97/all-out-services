@@ -135,18 +135,23 @@ function Contact() {
                             type="tel"
                             name="phone"
                             placeholder="Phone Number"
+                            required
                             className="w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-orange-500"
                         />
 
                         <select
                             name="projectType"
                             defaultValue=""
+                            required
                             className="w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-orange-500"
                         >
-                            <option value="" disabled>
+
+                            <option value="disabed">
                                 Select Project Type
                             </option>
 
+                            <option>Septic Installation</option>
+                            <option>Forestry Mulching</option>
                             <option>Retaining Wall</option>
                             <option>Patio</option>
                             <option>Driveway</option>
@@ -154,8 +159,25 @@ function Contact() {
                             <option>Grading</option>
                             <option>Drainage</option>
                             <option>Outdoor Living Space</option>
+                            <option>Land Clearing</option>
                             <option>Other</option>
                         </select>
+
+                        <select
+                            name="preferredContact"
+                            defaultValue=""
+                            required
+                            className="w-full rounded-xl border border-white/10 bg-[#111827] p-4 outline-none focus:border-orange-500"
+                        >
+                            <option value="" disabled>
+                                Preferred Contact Method
+                            </option>
+
+                            <option>Phone Call</option>
+                            <option>Text Message</option>
+                            <option>Email</option>
+                        </select>
+
 
                         <textarea
                             name="message"

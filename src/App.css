@@ -182,3 +182,192 @@
     border-right-color: var(--border);
   }
 }
+
+/* ====================
+  PROMO CARD
+==================== */
+
+.promo-strip {
+  position: relative;
+  margin-top: -70px;
+  margin-bottom: 70px;
+  z-index: 20;
+}
+
+.promo-card {
+  width: min(1180px,92%);
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24,24,24,.96),
+      rgba(15,15,15,.96)
+    );
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 30px 70px rgba(0,0,0,.45);
+
+}
+
+.promo-left {
+  max-width: 700px;
+}
+
+.promo-badge {
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: ..55rem 1rem;
+
+  border-radius: 999px;
+
+  background: #ff7a1a;
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: .75rem;
+
+  letter-spacing: .14em;
+
+  margin-bottom: 24px;
+
+}
+
+.promo-card h2 {
+
+  color: white;
+
+  font-size: clamp(2.2rem,5vw,3.3rem);
+
+  line-height: 1.15;
+
+  margin-bottom: 18px;
+
+}
+
+.promo-card h2 span {
+  
+  display: block;
+
+  color: #ff7a1a;
+
+}
+
+.promo-card p {
+  
+  font-size: 1.055rem;
+
+  line-height: 1.9;
+
+  color: #b7bcc6;
+
+  margin-bottom: 28px;
+
+}
+
+.promo-features {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+}
+
+.promo-features span {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: white;
+
+  font-weight: 600;
+
+}
+
+.promo-features svg {
+
+  color: #ff7a1a;
+
+}
+
+.promo-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 18px 34px;
+
+  border-radius: 999px;
+
+  background: #ff7a1a;
+
+  color: white;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: .3s;
+
+  white-space: nowrap;
+
+}
+
+.promo-button:hover {
+
+  transform: translate&(-4px);
+
+  box-shadow: 
+    0 15px 30px rgba(255,122,26,.35);
+
+}
+
+@media(max-width:900px) {
+
+  .promo-strip {
+
+    margin-top: -40px;
+
+  }
+
+  .promo-card {
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 40px 30px;
+
+  }
+
+  .promo-features {
+
+    justify-content: center;
+
+  }
+  
+}

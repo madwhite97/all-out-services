@@ -8,6 +8,10 @@ import FeaturedProjects from "./components/home/FeaturedProjects";
 import WatchOurWork from "./components/videos/WatchOurWork";
 import Contact from "./components/home/Contact";
 import Footer from "./components/layout/Footer";
+import ForestryMulching from "./pages/ForestryMulching";
+import Septic from "./pages/Septic";
+import PromoStrip from "./components/home/PromoStrip";
+import Reviews from "./components/home/Reviews";
 
 import Gallery from "./pages/Gallery";
 
@@ -19,11 +23,15 @@ function HomePage() {
       <main>
         <Hero />
 
+        <PromoStrip />
+
         <Services />
 
         <About />
 
         <FeaturedProjects />
+
+        <Reviews />
 
         <WatchOurWork />
 
@@ -41,6 +49,11 @@ function App() {
       <Route path="/" element={<HomePage />} />
 
       <Route path="/gallery" element={<Gallery />} />
+
+      <Route path="services/forestry-mulching" element={<ForestryMulching />} />
+
+      <Route path="/septic" element={<Septic />} />
+
     </Routes>
   );
 }

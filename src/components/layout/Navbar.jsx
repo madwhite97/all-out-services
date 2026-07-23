@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import logo from "../../assets/images/logo-navbar.png";
 import Button from "../ui/Button";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const links = [
     { name: "Home", href: "#hero" },
@@ -56,6 +57,13 @@ function Navbar() {
                         </HashLink>
                     ))}
 
+                    <Link
+                        to="/services/forestry-mulching"
+                        className="text-sm font-semibold uppercase tracking-wider text-gray-300 transition hover:text-orange-500"
+                    >
+                        Forestry Mulching
+                    </Link>
+
                     <HashLink smooth to="/#contact">
                         <Button>
                             Free Estimate
@@ -89,6 +97,14 @@ function Navbar() {
                                 {link.name}
                             </HashLink>
                         ))}
+
+                        <Link
+                            to="/services/forestry-mulching"
+                            className="py-4 text-lg text-white"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            Forestry Mulching
+                        </Link>
 
                         <div className="mt-4">
                             <HashLink smooth to="/#contact">
