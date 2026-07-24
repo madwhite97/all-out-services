@@ -2,16 +2,16 @@ import { Star, ExternalLink } from "lucide-react";
 
 const reviews = [
     {
-        name: "Your Next Customer",
-        text: "Your Google review could be featured here.",
+        name: "Maddie",
+        text: "All Out did my driveway. They truly worked with us the whole way through the process and we love it.",
     },
     {
-        name: "Happy Homeowner",
-        text: "We take pride in quality workmanship, honest communication, and treating every every property with care.",
+        name: "Jason",
+        text: "Super impressed with this company and how my land looks after they cleared it.",
     },
     {
-        name: "Leave a Review",
-        text: "If we've completed a project for you, we'd love to hear about your experience.",
+        name: "Paul",
+        text: "Our new retaining wall looks amazing.Awesome company!",
     },
 ];
 
