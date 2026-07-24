@@ -52,7 +52,7 @@ function App() {
 
       <Route path="services/forestry-mulching" element={<ForestryMulching />} />
 
-      <Route path="/septic" element={<Septic />} />
+      <Route path="/services/septic" element={<Septic />} />
 
     </Routes>
   );
