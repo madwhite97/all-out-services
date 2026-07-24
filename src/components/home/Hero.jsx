@@ -29,7 +29,7 @@ function Hero() {
                         Northeast Tennessee
                     </p>
 
-                    <h1 className="text-5xl font-black leading-tight text-white md:text-7xl">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight text-white">
                         Built To Last.
                         <br />
                         Built <span className="text-orange-500">All Out.</span>
@@ -50,7 +50,7 @@ function Hero() {
                         </Button>
                     </div>
 
-                    <div className="mt-12 grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
+                    <div className="mt-12 mb-12 grid grid-cols-1 gap-4 text-center sm:mb-0 sm:grid-cols-3">
                         <span>✓ Licensed & Insured</span>
                         <span>✓ Free Estimates</span>
                         <span>✓ Residential & Commercial</span>
@@ -58,7 +58,7 @@ function Hero() {
                 </motion.div>
             </div>
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                 <a
                     href="#services"
                     className="flex items-center justify-center text-3xl text-white"

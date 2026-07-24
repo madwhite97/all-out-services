@@ -41,7 +41,7 @@ function WatchOurWork() {
     };
 
     return (
-        <section id="videos" className="bg-[#111827] py-28">
+        <section id="videos" className="bg-[#111827] pt-16 pb-20  lg:py-28">
 
             <Container>
 
@@ -51,7 +51,7 @@ function WatchOurWork() {
                     description = "Watch our crew transform properties throughout Northeast Tennessee."
                 />
 
-                <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid gap-8 md:gap-10 md:grid-cols-2 xl:grid-cols-3">
 
                     {videos.map((video, index) => (
                         <motion.div

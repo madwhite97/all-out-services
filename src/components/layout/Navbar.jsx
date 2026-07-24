@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/images/logo-navbar.png";
-import Button from "../ui/Button";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+
+import logo from "../../assets/images/logo-navbar.png";
+import Button from "../ui/Button";
 
 const links = [
     { name: "Home", href: "#hero" },
@@ -29,21 +30,27 @@ function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
-                ? "bg-[#0B0B0B]/95 backdrop-blur-lg shadow-lg"
-                : "bg-transparent"
+            className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+                scrolled
+                    ? "bg-[#0B0B0B]/95 backdrop-blur-lg shadow-lg"
+                    : "bg-transparent"
             }`}
         >
-            <div className="mx-auto flex  h-20 max-w-7xl items-center justify-between px-6">
+            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:h-20 lg:px-6">
 
-                <HashLink smooth to="/#hero" className="flex items-center">
+                <HashLink
+                    smooth
+                    to="/#hero"
+                    className="flex items-center"
+                >
                     <img
                         src={logo}
                         alt="All Out Services"
-                        className="h-20 w-auto"
+                        className="h-16 w-auto lg:h-20"
                     />
                 </HashLink>
 
+                {/* Desktop Navigation */}
                 <nav className="hidden items-center gap-8 lg:flex">
 
                     {links.map((link) => (
@@ -72,26 +79,29 @@ function Navbar() {
 
                 </nav>
 
+                {/* Mobile Menu Button */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="text-3xl text-white lg:hidden"
+                    className="flex h-10 w-10 items-center justify-center text-3xl text-white transition hover:text-orange-500 lg:hidden"
+                    aria-label="Open Menu"
                 >
                     ☰
                 </button>
 
             </div>
 
+            {/* Mobile Navigation */}
             {mobileOpen && (
                 <div className="border-t border-white/10 bg-[#0B0B0B] lg:hidden">
-                    
-                    <div className="flex flex-col p-6">
+
+                    <div className="flex flex-col px-5 py-4">
 
                         {links.map((link) => (
                             <HashLink
                                 smooth
                                 key={link.name}
                                 to={`/${link.href}`}
-                                className="py-4 text-lg text-white"
+                                className="py-3 text-lg font-medium text-white transition hover:text-orange-500"
                                 onClick={() => setMobileOpen(false)}
                             >
                                 {link.name}
@@ -100,14 +110,26 @@ function Navbar() {
 
                         <Link
                             to="/services/forestry-mulching"
-                            className="py-4 text-lg text-white"
+                            className="py-3 text-lg font-medium text-white transition hover:text-orange-500"
                             onClick={() => setMobileOpen(false)}
                         >
                             Forestry Mulching
                         </Link>
 
-                        <div className="mt-4">
-                            <HashLink smooth to="/#contact">
+                        <Link
+                            to="/services/septic"
+                            className="py-3 text-lg font-medium text-white transition hover:text-orange-500"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            Septic Systems
+                        </Link>
+
+                        <div className="mt-5">
+                            <HashLink
+                                smooth
+                                to="/#contact"
+                                onClick={() => setMobileOpen(false)}
+                            >
                                 <Button>
                                     Free Estimate
                                 </Button>

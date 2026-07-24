@@ -6,11 +6,11 @@ import Button from "../ui/Button";
 
 function About() {
     return (
-        <section id="about" className="bg-[#111827] py-28">
+        <section id="about" className="bg-[#111827] py-20 lg:py-28">
 
             <Container>
 
-                <div className="grid items-center gap-20 lg:grid-cols-2">
+                <div className="grid items-center gap-14 lg:gap-20 lg:grid-cols-2">
 
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -23,14 +23,14 @@ function About() {
                             About All Out Services
                         </span>
 
-                        <h2 className="mt-5 text-5xl font-black leading-tight">
+                        <h2 className="mt-5 text-4xl lg:text-5xl font-black leading-tight">
                             Built To Last.
                             <br />
                             Built All Out.
                         </h2>
 
                         <p className="mt-8 text-lg leading-8 text-gray-400">
-                            At All Out Services, we believe quality work starts with honesty, crafstmanship, and attention to detail. From excavation and reatining walls to concrete, land clearing and forestry mulching, we treat every project like it's our own property.
+                            At All Out Services, we believe quality work starts with honesty, craftsmanship, and attention to detail. From excavation and retaining walls to concrete, land clearing and forestry mulching, we treat every project like it's our own property.
                         </p>
 
                         <div className="mt-10 grid gap-5 text-lg">
